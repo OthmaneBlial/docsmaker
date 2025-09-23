@@ -56,6 +56,10 @@ class TestBuildCommand:
 
 class TestServeCommand:
     def test_serve_success(self, sample_config_file, tmp_path, mocker):
+        # Mock livereload to be available
+        mock_livereload = mocker.MagicMock()
+        mocker.patch('docsmaker.cli.livereload', mock_livereload)
+
         mock_config = mocker.patch('docsmaker.cli.Config.from_yaml')
         config_mock = MagicMock()
         config_mock.out_dir = str(tmp_path / "site")
@@ -90,6 +94,10 @@ class TestServeCommand:
         )
 
     def test_serve_output_dir_not_exist(self, sample_config_file, mocker):
+        # Mock livereload to be available
+        mock_livereload = mocker.MagicMock()
+        mocker.patch('docsmaker.cli.livereload', mock_livereload)
+
         mock_config = mocker.patch('docsmaker.cli.Config.from_yaml')
         config_mock = MagicMock()
         config_mock.out_dir = "nonexistent"
