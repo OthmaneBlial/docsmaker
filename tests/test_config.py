@@ -44,8 +44,14 @@ class TestConfig:
 
     def test_from_yaml_file_not_found(self, tmp_path):
         non_existent = tmp_path / "missing.yaml"
-        with pytest.raises(FileNotFoundError, match="Configuration file not found"):
-            Config.from_yaml(non_existent)
+        config = Config.from_yaml(non_existent)
+        # Should create default config
+        assert config.site_name == "Docsmaker Documentation"
+        assert config.docs_dir == "docs"
+        assert config.out_dir == "site"
+        assert config.theme == "default"
+        assert config.enable_search is True
+        assert non_existent.exists()  # File should be created
 
     def test_from_yaml_invalid_yaml(self, tmp_path):
         invalid_yaml = tmp_path / "invalid.yaml"
