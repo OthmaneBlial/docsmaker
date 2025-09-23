@@ -1,6 +1,4 @@
 import pytest
-import yaml
-from pathlib import Path
 from docsmaker.config import Config, NavigationItem
 
 

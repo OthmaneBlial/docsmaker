@@ -1,4 +1,3 @@
-import pytest
 import json
 from pathlib import Path
 from docsmaker.config import Config
@@ -83,10 +82,9 @@ class TestFullBuildProcess:
         assert len(data) == 2
         assert data[0]["title"] == "Index"
 
-        # Check assets copied (if any)
+        # Check assets directory state (themes may or may not ship assets)
         assets_dir = out_path / "assets"
-        # Since no assets in sample, might not exist, but theme assets should be copied
-        # Actually, theme has no assets, so maybe not
+        assert not assets_dir.exists() or assets_dir.is_dir()
 
     def test_build_with_navigation_ordering(self, tmp_path):
         # Create docs with navigation

@@ -5,9 +5,8 @@ import re
 import shutil
 import yaml
 from pathlib import Path
-from string import Template
 from typing import List, Dict, Any, Optional
-from jinja2 import Environment, FileSystemLoader
+from jinja2 import Environment, FileSystemLoader, select_autoescape
 from .config import Config
 from .parser import Parser
 from .utils import ensure, read, title_from_md, humanize, collect_headings
@@ -52,7 +51,11 @@ class Builder:
                     current_path = None
             else:
                 current_path = None
-        self.jinja_env = Environment(loader=FileSystemLoader(template_paths))
+        # Enable autoescaping to avoid accidentally rendering unsafe HTML via templates
+        self.jinja_env = Environment(
+            loader=FileSystemLoader(template_paths),
+            autoescape=select_autoescape(("html", "xml")),
+        )
 
     def _load_theme_config(self) -> Dict[str, Any]:
         """Load theme configuration with inheritance."""
@@ -257,4 +260,3 @@ class Builder:
             next_link=next_link,
             **self.theme_config
         )
-

@@ -36,8 +36,10 @@ def github_slug(text: str) -> str:
 def collect_headings(html: str) -> List[Tuple[int, str, str]]:
     """Collect headings from HTML content."""
     items = re.findall(r"<h([1-3])\s+[^>]*id=\"([^\"]+)\"[^>]*>(.*?)</h\1>", html, flags=re.I | re.S)
-    clean = lambda s: re.sub(r"<[^>]+>", "", s).strip()
-    return [(int(lvl), hid, clean(txt)) for lvl, hid, txt in items]
+    def _strip_tags(source: str) -> str:
+        return re.sub(r"<[^>]+>", "", source).strip()
+
+    return [(int(lvl), hid, _strip_tags(txt)) for lvl, hid, txt in items]
 
 
 def slugify(text: str) -> str:

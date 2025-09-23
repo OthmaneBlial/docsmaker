@@ -1,4 +1,3 @@
-import pytest
 from docsmaker.parser import Parser
 
 

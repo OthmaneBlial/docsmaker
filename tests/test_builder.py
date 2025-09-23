@@ -1,10 +1,7 @@
-import pytest
 import json
 from pathlib import Path
-from unittest.mock import MagicMock
 from docsmaker.builder import Builder, Page
 from docsmaker.config import Config
-from docsmaker.parser import Parser
 
 
 class TestPage:
@@ -36,7 +33,7 @@ class TestBuilder:
 
     def test_load_theme_config(self, sample_config, parser, mocker):
         mocker.patch('pathlib.Path.exists', return_value=True)
-        mock_open = mocker.patch('builtins.open', mocker.mock_open(read_data="extends: base\ntheme_color: blue\n"))
+        mocker.patch('builtins.open', mocker.mock_open(read_data="extends: base\ntheme_color: blue\n"))
         mocker.patch('yaml.safe_load', return_value={"extends": "base", "theme_color": "blue"})
 
         builder = Builder(sample_config, parser)

@@ -3,8 +3,8 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "docsmaker"
-version = "1.0.1"
+name = "docsmakerpy"
+version = "1.0.10"
 description = "Generate static documentation sites from Markdown files with theming and plugins."
 authors = [{name = "Othmane BLIAL"}]
 readme = "README.md"

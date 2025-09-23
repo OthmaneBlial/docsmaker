@@ -1,9 +1,7 @@
 """Markdown parsing with MarkdownIt and plugins."""
 
 import re
-from typing import Optional
 from markdown_it import MarkdownIt
-from markdown_it.token import Token
 from mdit_py_plugins.front_matter import front_matter_plugin
 from mdit_py_plugins.footnote import footnote_plugin
 from mdit_py_plugins.tasklists import tasklists_plugin

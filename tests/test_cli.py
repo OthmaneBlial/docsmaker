@@ -1,8 +1,7 @@
 import pytest
-from pathlib import Path
-from unittest.mock import patch, MagicMock
+from unittest.mock import MagicMock
 from click.exceptions import Exit
-from docsmaker.cli import app, build, serve, clean
+from docsmaker.cli import build, serve, clean
 
 
 class TestBuildCommand:
@@ -25,9 +24,8 @@ class TestBuildCommand:
         mock_config = mocker.patch('docsmaker.cli.Config.from_yaml')
         config_mock = MagicMock()
         mock_config.return_value = config_mock
-        mock_parser = mocker.patch('docsmaker.cli.Parser')
+        mocker.patch('docsmaker.cli.Parser')
         mock_builder = mocker.patch('docsmaker.cli.Builder')
-        mock_echo = mocker.patch('docsmaker.cli.typer.echo')
 
         build(sample_config_file, out_dir="custom_site")
 
@@ -42,6 +40,7 @@ class TestBuildCommand:
         with pytest.raises(Exit):
             build(missing_config)
 
+        mock_config.assert_called_once_with(missing_config)
         mock_echo.assert_called_once_with("Error: not found", err=True)
 
     def test_build_general_error(self, sample_config_file, mocker):
@@ -51,6 +50,7 @@ class TestBuildCommand:
         with pytest.raises(Exit):
             build(sample_config_file)
 
+        mock_config.assert_called_once_with(sample_config_file)
         mock_echo.assert_called_once_with("Error: build error", err=True)
 
 

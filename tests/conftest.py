@@ -1,7 +1,5 @@
 import pytest
-import tempfile
 import yaml
-from pathlib import Path
 from docsmaker.config import Config
 from docsmaker.parser import Parser
 from docsmaker.builder import Builder
