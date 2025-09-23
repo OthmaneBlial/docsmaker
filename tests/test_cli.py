@@ -34,14 +34,20 @@ class TestBuildCommand:
 
     def test_build_config_not_found(self, tmp_path, mocker):
         missing_config = tmp_path / "missing.yaml"
-        mock_config = mocker.patch('docsmaker.cli.Config.from_yaml', side_effect=FileNotFoundError("not found"))
+        # Config.from_yaml now creates default config if not exists
+        mock_config = mocker.patch('docsmaker.cli.Config.from_yaml')
+        config_mock = MagicMock()
+        mock_config.return_value = config_mock
+        mock_parser = mocker.patch('docsmaker.cli.Parser')
+        mock_builder = mocker.patch('docsmaker.cli.Builder')
         mock_echo = mocker.patch('docsmaker.cli.typer.echo')
 
-        with pytest.raises(Exit):
-            build(missing_config)
+        build(missing_config)
 
         mock_config.assert_called_once_with(missing_config)
-        mock_echo.assert_called_once_with("Error: not found", err=True)
+        mock_parser.assert_called_once()
+        mock_builder.assert_called_once()
+        mock_echo.assert_not_called()
 
     def test_build_general_error(self, sample_config_file, mocker):
         mock_config = mocker.patch('docsmaker.cli.Config.from_yaml', side_effect=Exception("build error"))
