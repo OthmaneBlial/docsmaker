@@ -1,0 +1,16 @@
+site_name: My Documentation
+docs_dir: docs
+out_dir: site
+theme: default
+enable_search: true
+navigation:
+  - icon: "🏠"
+    title: "Home"
+    file: "index.md"
+  - icon: "📖"
+    title: "Usage"
+    file: "usage.md"
+  - icon: "🔧"
+    title: "API"
+    file: "api.md"
+plugins: {}

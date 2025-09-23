@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>{{ title }} · {{ site_name }}</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/github-markdown-css@5.5.1/github-markdown.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/github-markdown-css@5.5.1/github-markdown-dark.min.css" rel="stylesheet" media="(prefers-color-scheme: dark)">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+<button class="menu-btn btn">Menu</button>
+<div class="overlay" data-close></div>
+<div class="layout">
+  {{ sidebar }}
+  <main class="main">
+    <div class="container">
+      <div class="topbar">
+        <div>
+          <h1 style="margin:0 0 6px 0">{{ title }}</h1>
+          <div style="color:#6b7280;font-size:14px">{{ description }}</div>
+        </div>
+        <div><button id="themeBtn" class="btn">Theme</button></div>
+      </div>
+      <div class="grid">
+        <article id="content" class="markdown-body">
+          {{ content }}
+        </article>
+        <aside>
+          <div style="position:sticky;top:24px;border:1px solid #e5e7eb;border-radius:12px;padding:12px;background:#fff0">
+            <div style="font-weight:600;margin-bottom:6px">On this page</div>
+            <div class="toc">{{ toc }}</div>
+            <div class="nav-links" style="margin-top:12px;font-size:12px;color:#6b7280">
+              <div>{{ prev_link }}</div>
+              <div>{{ next_link }}</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-json.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
