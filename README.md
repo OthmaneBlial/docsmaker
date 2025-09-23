@@ -1,6 +1,6 @@
 # Docsmaker
 
-[![CI](https://github.com/OthmaneBlial/docsmakerpy/actions/workflows/ci.yml/badge.svg)](https://github.com/OthmaneBlial/docsmakerpy/actions/workflows/ci.yml)
+[![CI](https://github.com/OthmaneBlial/docsmaker/actions/workflows/ci.yml/badge.svg)](https://github.com/OthmaneBlial/docsmaker/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/OthmaneBlial/docsmakerpy/branch/main/graph/badge.svg)](https://codecov.io/gh/OthmaneBlial/docsmakerpy)
 [![PyPI version](https://img.shields.io/pypi/v/docsmakerpy.svg)](https://pypi.org/project/docsmakerpy/)
 [![PyPI downloads](https://img.shields.io/pypi/dm/docsmakerpy.svg)](https://pypi.org/project/docsmakerpy/)
@@ -100,8 +100,8 @@ For detailed documentation, see the `docs/` directory or visit the generated sit
 We welcome contributions from the community! Whether it's bug reports, feature requests, documentation improvements, or code contributions, every bit helps make Docsmaker better.
 
 ### Ways to Contribute
-- 🐛 **Report Issues**: Found a bug? [Open an issue](https://github.com/OthmaneBlial/docsmakerpy/issues) with details
-- 💡 **Suggest Features**: Have an idea? [Start a discussion](https://github.com/OthmaneBlial/docsmakerpy/discussions)
+- 🐛 **Report Issues**: Found a bug? [Open an issue](https://github.com/OthmaneBlial/docsmaker/issues) with details
+- 💡 **Suggest Features**: Have an idea? [Start a discussion](https://github.com/OthmaneBlial/docsmaker/discussions)
 - 📖 **Improve Documentation**: Help make our docs clearer and more comprehensive
 - 🧪 **Write Tests**: Increase our test coverage and ensure stability
 - 🎨 **Design Themes**: Create new themes or improve existing ones
@@ -110,7 +110,7 @@ For detailed contribution guidelines, see our [Contributing Guide](docs/contribu
 
 ## 🌟 Community
 
-- **📧 Discussions**: Join conversations on [GitHub Discussions](https://github.com/OthmaneBlial/docsmakerpy/discussions)
+- **📧 Discussions**: Join conversations on [GitHub Discussions](https://github.com/OthmaneBlial/docsmaker/discussions)
 - **🐦 Social Media**: Follow us for updates and tips
 - **💬 Discord**: Chat with the community (coming soon)
 - **📧 Newsletter**: Stay updated with our latest releases
