@@ -1,9 +1,9 @@
 # Docsmaker
 
-[![CI](https://github.com/OthmaneBlial/docsmaker/actions/workflows/ci.yml/badge.svg)](https://github.com/OthmaneBlial/docsmaker/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/OthmaneBlial/docsmaker/branch/main/graph/badge.svg)](https://codecov.io/gh/OthmaneBlial/docsmaker)
-[![PyPI version](https://img.shields.io/pypi/v/docsmaker.svg)](https://pypi.org/project/docsmaker/)
-[![PyPI downloads](https://img.shields.io/pypi/dm/docsmaker.svg)](https://pypi.org/project/docsmaker/)
+[![CI](https://github.com/OthmaneBlial/docsmakerpy/actions/workflows/ci.yml/badge.svg)](https://github.com/OthmaneBlial/docsmakerpy/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/OthmaneBlial/docsmakerpy/branch/main/graph/badge.svg)](https://codecov.io/gh/OthmaneBlial/docsmakerpy)
+[![PyPI version](https://img.shields.io/pypi/v/docsmakerpy.svg)](https://pypi.org/project/docsmakerpy/)
+[![PyPI downloads](https://img.shields.io/pypi/dm/docsmakerpy.svg)](https://pypi.org/project/docsmakerpy/)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -42,13 +42,13 @@
 Install Docsmaker from PyPI:
 
 ```bash
-pip install docsmaker
+pip install docsmakerpy
 ```
 
 For development with live reload:
 
 ```bash
-pip install docsmaker[serve]
+pip install docsmakerpy[serve]
 ```
 
 ### Basic Usage
@@ -58,13 +58,13 @@ pip install docsmaker[serve]
 2. Build your site:
 
 ```bash
-docsmaker build
+docsmakerpy build
 ```
 
 3. Serve locally (with live reload if installed):
 
 ```bash
-docsmaker serve
+docsmakerpy serve
 ```
 
 ## 📚 Documentation
@@ -100,8 +100,8 @@ For detailed documentation, see the `docs/` directory or visit the generated sit
 We welcome contributions from the community! Whether it's bug reports, feature requests, documentation improvements, or code contributions, every bit helps make Docsmaker better.
 
 ### Ways to Contribute
-- 🐛 **Report Issues**: Found a bug? [Open an issue](https://github.com/OthmaneBlial/docsmaker/issues) with details
-- 💡 **Suggest Features**: Have an idea? [Start a discussion](https://github.com/OthmaneBlial/docsmaker/discussions)
+- 🐛 **Report Issues**: Found a bug? [Open an issue](https://github.com/OthmaneBlial/docsmakerpy/issues) with details
+- 💡 **Suggest Features**: Have an idea? [Start a discussion](https://github.com/OthmaneBlial/docsmakerpy/discussions)
 - 📖 **Improve Documentation**: Help make our docs clearer and more comprehensive
 - 🧪 **Write Tests**: Increase our test coverage and ensure stability
 - 🎨 **Design Themes**: Create new themes or improve existing ones
@@ -110,7 +110,7 @@ For detailed contribution guidelines, see our [Contributing Guide](docs/contribu
 
 ## 🌟 Community
 
-- **📧 Discussions**: Join conversations on [GitHub Discussions](https://github.com/OthmaneBlial/docsmaker/discussions)
+- **📧 Discussions**: Join conversations on [GitHub Discussions](https://github.com/OthmaneBlial/docsmakerpy/discussions)
 - **🐦 Social Media**: Follow us for updates and tips
 - **💬 Discord**: Chat with the community (coming soon)
 - **📧 Newsletter**: Stay updated with our latest releases

@@ -7,7 +7,7 @@ Create a simple docs site:
 ```bash
 mkdir my-docs
 cd my-docs
-pip install docsmaker
+pip install docsmakerpy
 mkdir docs
 ```
 

@@ -5,13 +5,13 @@
 Install from PyPI:
 
 ```bash
-pip install docsmaker
+pip install docsmakerpy
 ```
 
 For development with live reload:
 
 ```bash
-pip install docsmaker[serve]
+pip install docsmakerpy[serve]
 ```
 
 ## Basic Workflow
