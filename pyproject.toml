@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "docsmakerpy"
-version = "1.2.0"
+version = "1.2.1"
 description = "Generate static documentation sites from Markdown files with theming and plugins."
 authors = [{name = "Othmane BLIAL"}]
 readme = "README.md"
@@ -48,7 +48,7 @@ dev = [
 ]
 
 [project.scripts]
-docsmaker = "docsmaker.cli:app"
+docsmakerpy = "docsmaker.cli:app"
 
 [tool.setuptools]
 include-package-data = true
