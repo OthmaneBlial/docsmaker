@@ -33,9 +33,14 @@ class Config(BaseModel):
 
     @classmethod
     def from_yaml(cls, path: Path) -> 'Config':
-        """Load configuration from YAML file."""
+        """Load configuration from YAML file, creating default if not exists."""
         if not path.exists():
-            raise FileNotFoundError(f"Configuration file not found: {path}")
+            # Create default config
+            default_config = cls()
+            path.parent.mkdir(parents=True, exist_ok=True)
+            with open(path, 'w', encoding='utf-8') as f:
+                yaml.safe_dump(default_config.model_dump(), f, default_flow_style=False, sort_keys=False)
+            return default_config
         with open(path, 'r', encoding='utf-8') as f:
             data = yaml.safe_load(f)
         return cls(**data)
