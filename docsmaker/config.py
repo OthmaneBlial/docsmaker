@@ -43,6 +43,10 @@ class Config(BaseModel):
             return default_config
         with open(path, 'r', encoding='utf-8') as f:
             data = yaml.safe_load(f)
+        if data is None:
+            data = {}
+        if not isinstance(data, dict):
+            raise ValueError(f"Invalid config in {path}: expected a mapping, got {type(data).__name__}")
         return cls(**data)
 
     def get_docs_path(self) -> Path:
